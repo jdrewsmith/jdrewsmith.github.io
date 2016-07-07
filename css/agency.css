@@ -50,7 +50,7 @@ h6 {
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #eeeeee;
+  background-color: #E0E0E0;
 }
 .bg-darkest-gray {
   background-color: #222222;
@@ -70,7 +70,7 @@ h6 {
 .open .dropdown-toggle.btn-primary {
   color: white;
   background-color: #00BFA5;
-  border-color: #f6bf01;
+  border-color: #00BFA5;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -106,7 +106,7 @@ fieldset[disabled] .btn-primary.active {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 2px;
+  border-radius: 0px;
   font-size: 18px;
   padding: 20px 40px;
 }
@@ -116,8 +116,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #F50057;
-  border-color: #F50057;
+  background-color: #00BFA5;
+  border-color: #00BFA5;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -213,7 +213,7 @@ fieldset[disabled] .btn-xl.active {
     transition: all 0.3s;
   }
   .navbar-default .navbar-nav > .active > a {
-    border-radius: 3px;
+    border-radius: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -424,7 +424,7 @@ section h3.section-subheading {
   background-color: #1DE9B6;
   color: white;
   border-radius: 100%;
-  border: 7px solid #f1f1f1;
+  border: 7px solid #e0e0e0;
   text-align: center;
 }
 .timeline > li .timeline-image h4 {
@@ -694,6 +694,9 @@ ul.social-buttons li a:active {
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
 }
+.portfolio-modal .modal-image {
+  max-height: 200px;
+}
 .portfolio-modal .close-modal {
   position: absolute;
   width: 75px;
@@ -704,13 +707,13 @@ ul.social-buttons li a:active {
   cursor: pointer;
 }
 .portfolio-modal .close-modal:hover {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .portfolio-modal .close-modal .lr {
-  height: 75px;
-  width: 1px;
+  height: 60px;
+  width: 3px;
   margin-left: 35px;
-  background-color: #222222;
+  background-color: #1DE9B6;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -719,9 +722,9 @@ ul.social-buttons li a:active {
   z-index: 1051;
 }
 .portfolio-modal .close-modal .lr .rl {
-  height: 75px;
-  width: 1px;
-  background-color: #222222;
+  height: 60px;
+  width: 3px;
+  background-color: #1DE9B6;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */

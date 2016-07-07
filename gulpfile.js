@@ -1,12 +1,12 @@
 // Assigning modules to local variables
 var gulp = require('gulp');
-var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var sass = require('gulp-sass');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -21,16 +21,21 @@ var banner = ['/*!\n',
 gulp.task('default', function() {
     // default tasks here
 });
+//
 
-// Less task to compile the less files and add the banner
-gulp.task('less', function() {
-    return gulp.src('less/agency.less')
-        .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+// compile all your Sass
+gulp.task('sass', function (){
+	gulp.src(['./dev/sass/*.scss', '!./dev/sass/_variables.scss'])
+		.pipe(sass({
+			includePaths: ['./dev/sass'],
+			outputStyle: 'expanded'
+		}))
+		.pipe(prefix(
+			"last 1 version", "> 1%", "ie 8", "ie 7"
+			))
+		.pipe(gulp.dest('./dev/css'))
+		.pipe(minifycss())
+		.pipe(gulp.dest('./prod/css'));
 });
 
 // Minify CSS
@@ -94,8 +99,8 @@ gulp.task('browserSync', function() {
 })
 
 // Watch Task that compiles LESS and watches for HTML or JS changes and reloads with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('less/*.less', ['less']);
+gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+    gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
