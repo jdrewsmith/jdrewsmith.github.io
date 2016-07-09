@@ -12,6 +12,7 @@ body {
   color: $gray;
 }
 
+
 .text-primary {
   color: $brand-primary;
 }
@@ -163,19 +164,30 @@ h6 {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
+
+      img {
+        height: inherit;
+      }
     }
+
+
 
     .navbar-nav > .active > a {
       border-radius: 3px;
     }
   }
 
-  .navbar-default.navbar-shrink {
+  .navbar-default.affix {
     background-color: $gray-darkest;
     padding: 10px 0;
 
     .navbar-brand {
       font-size: 1.5em;
+
+      img {
+        height: 40px;
+      }
+
     }
   }
 }
@@ -598,12 +610,16 @@ aside.clients {
 // Contact Section
 
 section#contact {
-  background-color: $gray-darkest;
+  background-color: lighten($gray-darkest, 10%);
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
 
   .section-heading {
+    color: white;
+  }
+
+  .section-subheading {
     color: white;
   }
 
@@ -616,11 +632,22 @@ section#contact {
     }
 
     input.form-control {
+      @include form-font;
+      font-weight: 700;
       height: auto;
+      color: $brand-primary;
+      font-size: 16px;
+      background-color: rgba($gray-darkest, $sixty);
+
     }
 
     textarea.form-control {
-      height: 236px;
+      @include form-font;
+      font-weight: 700;
+      height: 244px;
+      color: $brand-primary;
+      font-size: 16px;
+      background-color: rgba($gray-darkest, $sixty);
     }
   }
 
@@ -665,6 +692,7 @@ section#contact {
 footer {
   padding: 25px 0;
   text-align: center;
+  background-color: $gray-darkest;
 
   span.copyright {
     line-height: 40px;

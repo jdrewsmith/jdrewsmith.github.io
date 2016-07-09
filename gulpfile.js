@@ -7,6 +7,8 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var minifycss = require('gulp-minify-css')
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -25,28 +27,20 @@ gulp.task('default', function() {
 
 // compile all your Sass
 gulp.task('sass', function (){
-	gulp.src(['./dev/sass/*.scss', '!./dev/sass/_variables.scss'])
+	gulp.src('./scss/*.scss')
 		.pipe(sass({
-			includePaths: ['./dev/sass'],
+			includePaths: ['./scss'],
 			outputStyle: 'expanded'
 		}))
 		.pipe(prefix(
-			"last 1 version", "> 1%", "ie 8", "ie 7"
+			"last 2 versions"
 			))
-		.pipe(gulp.dest('./dev/css'))
 		.pipe(minifycss())
-		.pipe(gulp.dest('./prod/css'));
-});
-
-// Minify CSS
-gulp.task('minify-css', function() {
-    return gulp.src('css/agency.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+    .pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest('css'))
+    .pipe(browserSync.reload({
+        stream: true
+    }));
 });
 
 // Minify JS
@@ -99,9 +93,8 @@ gulp.task('browserSync', function() {
 })
 
 // Watch Task that compiles LESS and watches for HTML or JS changes and reloads with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'sass', 'minify-js'], function() {
     gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);

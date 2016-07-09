@@ -57,7 +57,7 @@
 }
 
 @mixin script-font {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
 @mixin body-font {
@@ -67,4 +67,8 @@
 @mixin heading-font {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+}
+
+@mixin form-font {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
