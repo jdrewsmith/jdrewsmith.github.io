@@ -296,7 +296,7 @@ section {
       margin: 0 auto;
 
       .portfolio-hover {
-        background: fade($brand-primary, 90%);
+        background: rgba($brand-primary, 0.8);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -744,6 +744,8 @@ ul.social-buttons {
   outline: none;
 }
 
+// Modal Style
+
 .portfolio-modal {
   .modal-content {
     border-radius: 0;
@@ -783,8 +785,8 @@ ul.social-buttons {
 
   .close-modal {
     position: absolute;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     top: 25px;
     right: 25px;
@@ -795,10 +797,10 @@ ul.social-buttons {
     }
 
     .lr {
-      height: 75px;
-      width: 1px;
+      height: 60px;
+      width: 3px;
       margin-left: 35px;
-      background-color: $gray-darkest;
+      background-color: $brand-primary;
       transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       /* IE 9 */
@@ -806,10 +808,11 @@ ul.social-buttons {
       /* Safari and Chrome */
       z-index: 1051;
 
+
       .rl {
-        height: 75px;
-        width: 1px;
-        background-color: $gray-darkest;
+        height: 60px;
+        width: 3px;
+        background-color: $brand-primary;
         transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         /* IE 9 */
