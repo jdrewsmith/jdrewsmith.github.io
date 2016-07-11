@@ -365,7 +365,6 @@ section {
 
 .portfolio-img {
   display: block;
-  max-width: 90%;
 }
 
 
@@ -775,6 +774,7 @@ ul.social-buttons {
     }
 
     strong {
+      @include serif-font;
       color: $brand-primary;
     }
 
@@ -847,6 +847,10 @@ ul.social-buttons {
     opacity: 0;
     display: none;
   }
+}
+
+.modal-section {
+  padding: 50px 0;
 }
 
 // Highlight Color Customization
