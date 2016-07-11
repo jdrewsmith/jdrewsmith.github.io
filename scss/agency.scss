@@ -49,10 +49,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5, {
   @include heading-font;
   font-weight: 700;
+}
+
+h6 {
+  @include serif-font;
+  font-weight: 700;
+  color: $brand-primary;
 }
 
 .img-centered {
@@ -352,10 +357,17 @@ section {
     }
   }
 
+
   * {
     z-index: 2;
   }
 }
+
+.portfolio-img {
+  display: block;
+  max-width: 90%;
+}
+
 
 @media(min-width:767px) {
   #portfolio {
@@ -491,7 +503,7 @@ section {
     }
 
     > li {
-      margin-bottom: 100px;
+      margin-bottom: 40px;
       min-height: 100px;
 
       .timeline-panel {
@@ -561,8 +573,8 @@ section {
       }
 
       .timeline-image {
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
         margin-left: -85px;
 
         h4 {
@@ -762,8 +774,13 @@ ul.social-buttons {
       font-size: 3em;
     }
 
+    strong {
+      color: $brand-primary;
+    }
+
     p {
       margin-bottom: 30px;
+      text-align: left;
     }
 
     p.item-intro {
@@ -771,9 +788,12 @@ ul.social-buttons {
       @include serif-font;
       font-style: italic;
       font-size: 16px;
+      text-align: center;
     }
 
     ul.list-inline {
+      @include heading-font;
+      text-transform: none;
       margin-bottom: 30px;
       margin-top: 0;
     }
@@ -789,7 +809,7 @@ ul.social-buttons {
     height: 60px;
     background-color: transparent;
     top: 25px;
-    right: 25px;
+    right: 50px;
     cursor: pointer;
 
     &:hover {
