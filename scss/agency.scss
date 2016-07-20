@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   @include body-font;
+  color: $gray;
 }
 
 .text-muted {
@@ -35,14 +36,14 @@ a:hover {
 }
 
 a {
-  color: $brand-primary;
+  color: darken($brand-primary, 10%);
 }
 
 a.active,
 a:active,
 a:focus,
 a:hover {
-  color: darken($brand-primary, 10%);
+  color: $brand-primary;
 }
 
 h1,
@@ -52,13 +53,15 @@ h4,
 h5, {
   @include heading-font;
   font-weight: 700;
+  color: $gray-darkest;
 }
 
 h6 {
-  @include serif-font;
+  @include heading-font;
   font-weight: 700;
-  color: $brand-primary;
+  color: $brand-secondary;
   font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .img-centered {
@@ -79,13 +82,14 @@ h6 {
   @include button-variant(white, $brand-primary, $brand-primary);
   @include heading-font;
   font-weight: 700;
+  border-radius: 0px;
 }
 
 .btn-xl {
   @include button-variant(white, $brand-primary, $brand-primary);
   @include heading-font;
   font-weight: 700;
-  border-radius: 3px;
+  border-radius: 0px;
   font-size: 18px;
   padding: 20px 40px;
 }
@@ -179,7 +183,7 @@ h6 {
 
 
     .navbar-nav > .active > a {
-      border-radius: 3px;
+      border-radius: 0px;
     }
   }
 
@@ -329,6 +333,17 @@ section {
             margin-top: -12px;
           }
 
+          .hvr.pulse {
+            -webkit-animation-name: hvr-pulse;
+            animation-name: hvr-pulse;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+          }
+
           h3,
           h4 {
             margin: 0;
@@ -389,10 +404,10 @@ section {
     bottom: 0;
     position: absolute;
     content: "";
-    width: 2px;
+    width: 5px;
     background-color: #f1f1f1;
-    left: 40px;
-    margin-left: -1.5px;
+    left: 42px;
+    margin-left: -5px;
   }
 
   > li {
@@ -449,6 +464,7 @@ section {
         font-size: 10px;
         margin-top: 12px;
         line-height: 14px;
+        color: white;
       }
     }
 
@@ -480,7 +496,7 @@ section {
   .timeline-heading {
     h4 {
       margin-top: 0;
-      color: inherit;
+      color: $brand-primary;
 
       &.subheading {
         text-transform: none;
@@ -776,7 +792,7 @@ ul.social-buttons {
 
     strong {
       @include serif-font;
-      color: $brand-primary;
+      color: $brand-secondary;
     }
 
     p {
@@ -809,22 +825,25 @@ ul.social-buttons {
       overflow: hidden;
 
       figcaption {
-      position: absolute;
-      margin-top: -60px;
-      background-color: rgba($brand-secondary, .6);
+      position: absolute;;
+      margin-bottom: 30px;
+      background-color: rgba($brand-secondary, .9);
       color: white;
       padding: 10px 20px;
+      max-width:85%;
+      text-align: left;
+
 
       opacity: 0;
-      bottom: 0;
-      left: -30%;
-      transition: all 0.6s ease;
-      -webkit-transition: all ease 0.6s;
-      -moz-transition: all ease 0.6s;
+      bottom: -20px;
+      transition: all 0.2s ease;
+      -webkit-transition: all ease 0.2s;
+      -moz-transition: all ease 0.2s;
       }
+
       &:hover figcaption {
         opacity: 1;
-        left:0;
+        bottom:0px;
       }
     }
   }
@@ -876,7 +895,7 @@ ul.social-buttons {
 }
 
 .modal-section {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 // Highlight Color Customization
