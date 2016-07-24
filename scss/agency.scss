@@ -59,13 +59,14 @@ h5, {
 h6 {
   @include heading-font;
   font-weight: 700;
-  color: $brand-secondary;
-  font-size: 18px;
+  color: $gray-darkest;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 
 .img-centered {
   margin: 0 auto;
+  max-height: 600px;
 }
 
 .bg-light-gray {
@@ -401,7 +402,7 @@ section {
 
   &:before {
     top: 0;
-    bottom: 0;
+    bottom: 10px;
     position: absolute;
     content: "";
     width: 5px;
@@ -632,6 +633,17 @@ section {
 aside.clients {
   img {
     margin: 50px auto;
+    max-height: 75px;
+    filter: grayscale(90%);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:active,
+    &:focus,
+    &:hover {
+    filter: grayscale(0%);
+    }
   }
 }
 
@@ -791,8 +803,9 @@ ul.social-buttons {
     }
 
     strong {
-      @include serif-font;
-      color: $brand-secondary;
+      @include heading-font;
+      color: $brand-primary;
+      text-transform: none;
     }
 
     p {
