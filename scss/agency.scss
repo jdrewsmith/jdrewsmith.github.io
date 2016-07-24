@@ -77,6 +77,16 @@ h6 {
   background-color: $gray-darkest;
 }
 
+blockquote {
+  @include serif-font;
+  background-color: $brand-secondary;
+  color: white;
+  margin: auto;
+  border: none;
+  padding: 20px 15px;
+  max-width: 70%;
+}
+
 // Restyled Primary Buttons
 
 .btn-primary {
@@ -804,7 +814,7 @@ ul.social-buttons {
 
     strong {
       @include heading-font;
-      color: $brand-primary;
+      color: $brand-secondary;
       text-transform: none;
     }
 
@@ -840,7 +850,7 @@ ul.social-buttons {
       figcaption {
       position: absolute;;
       margin-bottom: 30px;
-      background-color: rgba($brand-secondary, .9);
+      background-color: rgba($brand-primary, .9);
       color: white;
       padding: 10px 20px;
       max-width:85%;
@@ -858,6 +868,10 @@ ul.social-buttons {
         opacity: 1;
         bottom:0px;
       }
+    }
+
+    .fa-circle {
+      color: $brand-secondary;
     }
   }
 
