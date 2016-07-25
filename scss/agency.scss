@@ -69,6 +69,11 @@ h6 {
   max-height: 600px;
 }
 
+.img-height {
+    max-height: 600px;
+    padding: 0px 15px;
+}
+
 .bg-light-gray {
   background-color: $gray-lighter;
 }
@@ -86,7 +91,7 @@ blockquote {
   text-align: left;
   margin: auto;
   border: none;
-  padding: 20px 15px;
+  padding: 20px 30px;
   max-width: 70%;
   box-shadow: 2px 2px 15px $gray-lighter;
 }
@@ -101,6 +106,10 @@ blockquote {
 
 .green {
   color: $brand-primary;
+}
+
+.orange {
+  color: $brand-warning
 }
 
 // Restyled Primary Buttons
@@ -830,7 +839,7 @@ ul.social-buttons {
 
     strong {
       @include heading-font;
-      color: $brand-secondary;
+      color: $gray-darkest;
       text-transform: none;
     }
 
@@ -884,10 +893,6 @@ ul.social-buttons {
         opacity: 1;
         bottom:0px;
       }
-    }
-
-    .fa-circle {
-      color: $brand-secondary;
     }
   }
 
