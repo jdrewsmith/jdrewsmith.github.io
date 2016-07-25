@@ -79,12 +79,28 @@ h6 {
 
 blockquote {
   @include serif-font;
-  background-color: $brand-secondary;
-  color: white;
+  background-color: white;
+  color: $gray-darkest;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
   margin: auto;
   border: none;
   padding: 20px 15px;
   max-width: 70%;
+  box-shadow: 2px 2px 15px $gray-lighter;
+}
+
+.red {
+  color: $brand-danger;
+}
+
+.blue {
+  color: $brand-secondary
+}
+
+.green {
+  color: $brand-primary;
 }
 
 // Restyled Primary Buttons
