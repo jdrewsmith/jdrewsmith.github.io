@@ -139,6 +139,7 @@ blockquote {
   .navbar-brand {
     color: $brand-primary;
     @include script-font;
+    font-weight: 700;
 
     &.active,
     &:active,
@@ -278,8 +279,8 @@ header {
       .intro-lead-in {
         @include serif-font;
         font-style: italic;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 25px;
         margin-bottom: 25px;
       }
 
