@@ -82,6 +82,10 @@ h6 {
   background-color: $gray-darkest;
 }
 
+.bg-brand {
+  background-color: $brand-primary;
+}
+
 blockquote {
   @include serif-font;
   background-color: white;
@@ -110,6 +114,10 @@ blockquote {
 
 .orange {
   color: $brand-warning
+}
+
+.white {
+  color: white;
 }
 
 // Restyled Primary Buttons
