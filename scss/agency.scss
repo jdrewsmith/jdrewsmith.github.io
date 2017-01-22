@@ -258,6 +258,7 @@ header {
 
     .intro-lead-in {
       @include serif-font;
+      color: $brand-primary;
       font-style: italic;
       font-size: 22px;
       line-height: 22px;
@@ -337,60 +338,25 @@ section {
 
 #portfolio {
   .portfolio-item {
-    margin: 0 0 15px;
+    margin: 0 0 5px;
+    padding: 15px;
     right: 0;
+
+    &:hover {
+      box-shadow: 2px 2px 15px #BDBDBD;
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      transition: all ease 0.5s;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+    }
 
     .portfolio-link {
       display: block;
       position: relative;
       max-width: 400px;
       margin: 0 auto;
-
-      .portfolio-hover {
-        background: rgba($brand-primary, 0.8);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: all ease 0.5s;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-
-        &:hover {
-          opacity: 1;
-        }
-
-        .portfolio-hover-content {
-          position: absolute;
-          width: 100%;
-          height: 20px;
-          font-size: 20px;
-          text-align: center;
-          top: 50%;
-          margin-top: -12px;
-          color: white;
-
-          i {
-            margin-top: -12px;
-          }
-
-          .hvr.pulse {
-            -webkit-animation-name: hvr-pulse;
-            animation-name: hvr-pulse;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-          }
-
-          h3,
-          h4 {
-            margin: 0;
-          }
-        }
-      }
     }
 
     .portfolio-caption {
