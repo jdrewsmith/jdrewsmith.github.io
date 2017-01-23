@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   @include body-font;
+  font-weight: 400;
   color: $gray;
 }
 
@@ -142,7 +143,8 @@ blockquote {
 
   .navbar-brand {
     color: $brand-primary;
-    @include script-font;
+    @include heading-font;
+    text-transform: none;
     font-weight: 700;
 
     &.active,
@@ -211,7 +213,7 @@ blockquote {
     border: none;
 
     .navbar-brand {
-      font-size: 2em;
+      font-size: 3em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
@@ -233,7 +235,7 @@ blockquote {
     padding: 10px 0;
 
     .navbar-brand {
-      font-size: 1.5em;
+      font-size: 2em;
 
       img {
         height: 40px;
@@ -246,7 +248,7 @@ blockquote {
 header {
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
   @include background-cover;
   text-align: center;
@@ -312,7 +314,7 @@ section {
   }
 
   h3.section-subheading {
-    font-size: 16px;
+    font-size: 18px;
     @include serif-font;
     text-transform: none;
     font-style: italic;
@@ -363,7 +365,7 @@ section {
       max-width: 400px;
       margin: 0 auto;
       background-color: white;
-      text-align: center;
+      text-align: left;
       padding: 25px;
 
       h4 {
@@ -640,7 +642,8 @@ aside.clients {
   img {
     margin: 50px auto;
     max-height: 75px;
-    filter: grayscale(90%);
+    filter: grayscale(100%);
+    opacity: .4;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
@@ -649,6 +652,7 @@ aside.clients {
     &:focus,
     &:hover {
     filter: grayscale(0%);
+    opacity: 1;
     }
   }
 }
