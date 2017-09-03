@@ -61,7 +61,7 @@ h6 {
   @include heading-font;
   font-weight: 700;
   color: $gray-darkest;
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -94,7 +94,7 @@ blockquote {
   border: none;
   padding: 20px 30px;
   max-width: 70%;
-  box-shadow: 2px 2px 15px $gray-lighter;
+  box-shadow: 2px 2px 15px #cecece;
 }
 
 .red {
@@ -111,6 +111,10 @@ blockquote {
 
 .orange {
   color: $brand-warning
+}
+
+.pink {
+  color: #FF3D7B
 }
 
 .white {
