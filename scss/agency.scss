@@ -258,6 +258,7 @@ header {
   background-repeat: none;
   background-attachment: fixed;
   background-position: center center;
+  background-size: contain;
   @include background-cover;
   text-align: center;
   color: white;
