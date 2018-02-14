@@ -146,7 +146,7 @@ blockquote {
 // Custom Navigation Bar
 
 .navbar-default {
-  background-color: $gray;
+  background-color: $gray-darkest;
   border-color: transparent;
 
   .navbar-brand {
@@ -269,7 +269,7 @@ header {
 
     .intro-lead-in {
       @include body-font;
-      color: $brand-primary;
+      color: $gray;
       font-weight: 400;
       font-size: 22px;
       line-height: 22px;
