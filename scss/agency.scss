@@ -279,7 +279,8 @@ header {
     .intro-heading {
       @include heading-font;
       font-weight: 700;
-      font-size: 50px;
+      font-size: 40px;
+      letter-spacing: 6px;
       line-height: 50px;
       margin-bottom: 25px;
     }
@@ -306,8 +307,9 @@ header {
       .intro-heading {
         @include heading-font;
         font-weight: 700;
-        font-size: 80px;
-        line-height: 75px;
+        letter-spacing: 2px;
+        font-size: 65px;
+        line-height: 110px;
         margin-bottom: 50px;
       }
     }
