@@ -10,6 +10,10 @@ body {
   color: $gray;
 }
 
+.skills {
+  height:120px;
+}
+
 .text-muted {
   color: $gray;
 }
@@ -280,7 +284,7 @@ header {
       @include heading-font;
       font-weight: 700;
       font-size: 40px;
-      letter-spacing: 6px;
+      letter-spacing: 2px;
       line-height: 50px;
       margin-bottom: 25px;
     }
