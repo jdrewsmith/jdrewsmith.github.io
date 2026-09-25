@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J. Drew Smith — Product Designer</title>
+  <meta name="description" content="Dummy content — rough aesthetic pass, Carbon-inspired.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app-shell" id="app-shell" data-panel="home">
+
+    <header class="topbar">
+      <div class="wrap">
+        <button class="back-btn" id="back-btn" type="button" aria-label="Back to home">
+          <span aria-hidden="true">&larr;</span> Back
+        </button>
+        <a href="#home" class="logo" data-panel="home">J. Drew Smith</a>
+      </div>
+    </header>
+
+    <div class="panel-viewport">
+      <div class="panel-track no-transition" id="panel-track">
+
+        <section class="panel panel-home" id="panel-home" aria-label="Home">
+          <canvas id="hero-grid" class="hero-grid" aria-hidden="true"></canvas>
+
+          <div class="home-intro wrap">
+            <p class="eyebrow">Product Design — Placeholder Co.</p>
+            <h1 id="rotating-headline">Designing <span class="accent">systems</span>, not just screens.</h1>
+          </div>
+
+          <nav class="home-nav-list" aria-label="Primary">
+            <a class="home-nav-item" href="#work" data-panel="work">
+              <span class="sweep" aria-hidden="true"></span>
+              <span class="item-content wrap">
+                <span class="item-index">01</span>
+                <span class="item-label">Work</span>
+                <span class="item-desc">Selected case studies</span>
+                <span class="item-arrow" aria-hidden="true">&rarr;</span>
+              </span>
+            </a>
+            <a class="home-nav-item" href="#about" data-panel="about">
+              <span class="sweep" aria-hidden="true"></span>
+              <span class="item-content wrap">
+                <span class="item-index">02</span>
+                <span class="item-label">About</span>
+                <span class="item-desc">Background &amp; philosophy</span>
+                <span class="item-arrow" aria-hidden="true">&rarr;</span>
+              </span>
+            </a>
+            <a class="home-nav-item" href="#contact" data-panel="contact">
+              <span class="sweep" aria-hidden="true"></span>
+              <span class="item-content wrap">
+                <span class="item-index">03</span>
+                <span class="item-label">Contact</span>
+                <span class="item-desc">Get in touch</span>
+                <span class="item-arrow" aria-hidden="true">&rarr;</span>
+              </span>
+            </a>
+          </nav>
+        </section>
+
+        <section class="panel panel-sub panel-work" id="panel-work" aria-label="Work">
+          <div class="panel-inner wrap">
+            <p class="eyebrow">04 case studies</p>
+            <h2 tabindex="-1">Selected work</h2>
+
+            <div class="work-grid">
+              <a class="work-card" href="#">
+                <div class="thumb">01 — thumbnail</div>
+                <div class="meta">
+                  <p class="eyebrow tags">Platform · 0–1</p>
+                  <h3>Dummy Project Title One</h3>
+                  <p>One-line placeholder summary of the problem and outcome.</p>
+                </div>
+              </a>
+              <a class="work-card" href="#">
+                <div class="thumb">02 — thumbnail</div>
+                <div class="meta">
+                  <p class="eyebrow tags">Design systems</p>
+                  <h3>Dummy Project Title Two</h3>
+                  <p>One-line placeholder summary of the problem and outcome.</p>
+                </div>
+              </a>
+              <a class="work-card" href="#">
+                <div class="thumb">03 — thumbnail</div>
+                <div class="meta">
+                  <p class="eyebrow tags">Mobile · Research</p>
+                  <h3>Dummy Project Title Three</h3>
+                  <p>One-line placeholder summary of the problem and outcome.</p>
+                </div>
+              </a>
+              <a class="work-card" href="#">
+                <div class="thumb">04 — thumbnail</div>
+                <div class="meta">
+                  <p class="eyebrow tags">Enterprise SaaS</p>
+                  <h3>Dummy Project Title Four</h3>
+                  <p>One-line placeholder summary of the problem and outcome.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel-sub panel-about" id="panel-about" aria-label="About">
+          <div class="panel-inner wrap">
+            <p class="eyebrow">12 years</p>
+            <h2 tabindex="-1">About</h2>
+
+            <div class="about-grid">
+              <p>Placeholder bio copy. A few sentences on background, design philosophy, and the kinds of problems worth solving — swapped out for the real thing once content is ready.</p>
+              <dl class="stats">
+                <div>
+                  <dt>12</dt>
+                  <dd>Years in product design</dd>
+                </div>
+                <div>
+                  <dt>30+</dt>
+                  <dd>Shipped products</dd>
+                </div>
+                <div>
+                  <dt>4</dt>
+                  <dd>Design teams built</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel-sub panel-contact" id="panel-contact" aria-label="Contact">
+          <div class="panel-inner wrap contact">
+            <p class="eyebrow">Get in touch</p>
+            <h2 tabindex="-1">Let's talk.</h2>
+            <a class="email-link" href="mailto:hello@example.com">hello@example.com</a>
+            <ul class="contact-links">
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Résumé</a></li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/hero-grid.js" defer></script>
+  <script src="js/directional-hover.js" defer></script>
+  <script src="js/headline-rotator.js" defer></script>
+  <script src="js/router.js" defer></script>
+</body>
+</html>
